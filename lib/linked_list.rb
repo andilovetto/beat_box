@@ -24,6 +24,15 @@ class LinkedList
         counter
     end
     def to_string
-        
+        return "" if @head == nil
+        return @head.data if @head.next_node == nil
+        the_beat = @head.data #doop 
+        current_node = @head.next_node # node instance with value/data attr of deep
+        #require 'pry'; binding.pry
+        while current_node.next_node != nil do
+
+            #require 'pry'; binding.pry
+        end
+        the_beat << " " +  current_node.data
     end
-end
+end 
