@@ -78,4 +78,14 @@ class LinkedList
         end
         found_nodes
     end
+
+    def includes?(beat)
+        current_node = @head
+        #require 'pry'; binding.pry
+        while current_node.next_node != nil do
+            return true if current_node.data == beat
+            current_node = current_node.next_node
+        end
+        return false
+    end
 end 
