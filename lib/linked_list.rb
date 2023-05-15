@@ -62,4 +62,20 @@ class LinkedList
         previous.next_node = Node.new(beat)
         previous.next_node.next_node = tail
     end
+
+    def find(position, amount)
+        current_node = @head
+        position.times do
+            current_node = current_node.next_node
+        end
+        found_nodes = ""
+        amount.times.with_index do |index|
+            found_nodes << current_node.data
+            if current_node.next_node != nil
+                current_node = current_node.next_node
+            end
+            found_nodes << " " unless amount == index + 1
+        end
+        found_nodes
+    end
 end 
