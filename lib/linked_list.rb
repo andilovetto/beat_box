@@ -88,4 +88,16 @@ class LinkedList
         end
         return false
     end
+
+    def pop
+        current_node = @head
+        previous = nil
+        until current_node.next_node == nil do
+            previous = current_node
+            current_node = current_node.next_node
+        end
+        previous.next_node = nil
+        current_node.data
+        #require 'pry'; binding.pry
+    end
 end 
