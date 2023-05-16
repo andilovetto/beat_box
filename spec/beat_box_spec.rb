@@ -16,4 +16,10 @@ RSpec.describe BeatBox do
         expect(bb.list.head.next_node.data).to eq("doop")
         expect(bb.append("woo hoo shu")).to eq("woo hoo shu") 
     end
+
+    it 'counts' do
+        bb = BeatBox.new
+        bb.append("a b c d e f")
+        expect(bb.count).to eq(6)
+    end
 end
