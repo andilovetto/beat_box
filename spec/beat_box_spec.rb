@@ -22,4 +22,10 @@ RSpec.describe BeatBox do
         bb.append("a b c d e f")
         expect(bb.count).to eq(6)
     end
+
+    it 'plays' do
+        bb = BeatBox.new
+        bb.append("a b c d e f")
+        bb.play
+    end
 end
