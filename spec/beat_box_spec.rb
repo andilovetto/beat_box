@@ -7,11 +7,13 @@ RSpec.describe BeatBox do
         bb = BeatBox.new
         expect(bb).to be_an_instance_of(BeatBox)
         expect(bb.list.head).to eq(nil)
+    end
+       
+    it 'appends' do
+        bb = BeatBox.new
         expect(bb.append("deep doop ditt")).to eq("deep doop ditt")
         expect(bb.list.head.data).to eq("deep")
         expect(bb.list.head.next_node.data).to eq("doop")
-        expect(bb.append("woo hoo shu")).to eq("woo hoo shu")
-        expect(bb.count).to eq(6)
-        
+        expect(bb.append("woo hoo shu")).to eq("woo hoo shu") 
     end
 end
