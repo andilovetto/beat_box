@@ -25,7 +25,7 @@ RSpec.describe BeatBox do
 
     it 'plays' do
         bb = BeatBox.new
-        bb.append("a b c d e f")
+        bb.append("deep doo ditt woo hoo shu")
         bb.play
     end
 end
